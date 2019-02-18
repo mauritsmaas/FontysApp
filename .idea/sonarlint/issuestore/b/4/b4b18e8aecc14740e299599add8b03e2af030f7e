@@ -1,0 +1,17 @@
+
+[squid:UselessImportCheck"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8Ÿá‡õ-
+asquid:UselessImportCheck"6Remove this unused import 'javax.annotation.Resource'.(î¾Ì—8Ÿá‡õ-
+Fsquid:S11484"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Ÿá‡õ-
+[
+squid:S106="9Replace this use of System.out or System.err by a logger.(ı™øøÿÿÿÿ8ä©œÜ-
+jsquid:S2095+"GUse try-with-resources or close this "Statement" in a "finally" clause.(ìï‡Àûÿÿÿÿ8Ÿá‡õ-
+nsquid:UselessImportCheck"CRemove this unused import 'javax.persistence.EntityManagerFactory'.(îÜğ8š¥Û²-
+“squid:S1319&"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(Ëª“†ıÿÿÿÿ8Ÿá‡õ-
+[squid:UselessImportCheck"0Remove this unused import 'javax.ejb.Singleton'.(Æí—¿8Ÿá‡õ-
+jsquid:S2095,"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(Âõì“øÿÿÿÿ8Ÿá‡õ-
+jsquid:UselessImportCheck":Remove this unused import 'javax.persistence.Persistence'.(›²ö¾ıÿÿÿÿ8š¥Û²-
+_squid:UselessImportCheck"/Remove this unused import 'javax.ejb.Stateful'.(¹ÌˆÌüÿÿÿÿ8Ÿá‡õ-
+fsquid:S2095*"HUse try-with-resources or close this "Connection" in a "finally" clause.(êØ±¨8µíó®-
+msquid:S00100!"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(»«öÙ8Ÿá‡õ-
+Fsquid:S11482"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Ÿá‡õ-
+gsquid:S21473"DCombine this catch with the one at line 49, which has the same body.(Õ¡ËŞøÿÿÿÿ8Ÿá‡õ-
