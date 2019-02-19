@@ -1,5 +1,8 @@
 package model.logic;
 
+import org.hibernate.annotations.LazyCollection;
+import org.hibernate.annotations.LazyCollectionOption;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -16,23 +19,19 @@ public class Player {
     private Long games;
     private Long price;
 
-    @ManyToMany(cascade = {
-            CascadeType.PERSIST,
-            CascadeType.MERGE
-    })
-    @JoinTable(name = "player_club",
-            joinColumns = @JoinColumn(name = "players_id"),
-            inverseJoinColumns = @JoinColumn(name = "clubs_id")
-    )
+    @ManyToMany(targetEntity = Club.class)
+    @LazyCollection(LazyCollectionOption.FALSE)
     private List<Club> clubs = new ArrayList<>();
 
     @ManyToMany(targetEntity = Match.class)
+    @LazyCollection(LazyCollectionOption.FALSE)
     private List<Match> matches;
 
     @OneToOne
     private Pack pack;
 
-    @OneToMany( targetEntity=Upgrade.class )
+    @OneToMany( targetEntity=Upgrade.class)
+    @LazyCollection(LazyCollectionOption.FALSE)
     private List<Upgrade> upgrades;
 
     public Long getId() {

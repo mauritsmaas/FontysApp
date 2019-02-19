@@ -16,8 +16,8 @@ public class PlayerController {
 
     @GET
     @Consumes("application/json")
-    public List<User> allUsers(){
-        return playerService.allUsers();
+    public List<Player> All(){
+        return playerService.All();
     }
 
     @POST

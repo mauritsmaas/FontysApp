@@ -8,6 +8,8 @@ public class Upgrade {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+    private String name;
+    private Long boost;
     @OneToOne
     private Pack pack;
     @ManyToOne
@@ -35,5 +37,21 @@ public class Upgrade {
 
     public void setPlayer(Player player) {
         this.player = player;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Long getBoost() {
+        return boost;
+    }
+
+    public void setBoost(Long boost) {
+        this.boost = boost;
     }
 }

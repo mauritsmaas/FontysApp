@@ -13,7 +13,7 @@ public class Club {
     private Long id;
     private String name;
     private Long balance;
-    @ManyToMany(mappedBy = "clubs")
+    @ManyToMany(targetEntity = Player.class)
     private List<Player> players = new ArrayList<>();
 
     public Long getId() {

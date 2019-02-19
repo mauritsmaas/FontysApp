@@ -1,12 +1,0 @@
-
-nsquid:UselessImportCheck"CRemove this unused import 'javax.persistence.EntityManagerFactory'.(îÜğ8ıÛÄ±-
-Nsquid:S1989"+Add a "try/catch" block for "sendRedirect".(Šûßıÿÿÿÿ8¹¸ÇŞ-
-Isquid:S1989+"&Add a "try/catch" block for "forward".(Àá‘“ıÿÿÿÿ8ÂÆÉ¸-
-bsquid:UselessImportCheck"2Remove this unused import 'org.hibernate.Session'.(È¹›§ùÿÿÿÿ8ËÔŒ‘-
-Isquid:S1989+"&Add a "try/catch" block for "forward".(Àá‘“ıÿÿÿÿ8ÂÆÉ¸-
-jsquid:UselessImportCheck":Remove this unused import 'javax.persistence.Persistence'.(›²ö¾ıÿÿÿÿ8ıÛÄ±-
-asquid:UselessImportCheck"6Remove this unused import 'org.hibernate.Transaction'.(ìÌè³8ıÛÄ±-
-lsquid:UselessImportCheck
-"<Remove this unused import 'javax.persistence.EntityManager'.(ğàËÒıÿÿÿÿ8ıÛÄ±-
-[squid:UselessImportCheck"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8ıÛÄ±-
-hsquid:UselessImportCheck"=Remove this unused import 'org.hibernate.HibernateException'.(™òı²8ËÔŒ‘-

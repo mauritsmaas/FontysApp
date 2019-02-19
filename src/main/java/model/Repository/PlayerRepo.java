@@ -31,15 +31,16 @@ public class PlayerRepo{
 
     private ArrayList<User> userList = new ArrayList<>();
 
-    public List<User> allUsers(){
-        List<User> userList = null;
+    public List<Player> All(){
+        List<Player> players;
         try {
-            userList = em.createQuery(
-                    "SELECT u FROM User u", User.class).getResultList();
+            players = em.createQuery(
+                    "SELECT u FROM Player u", Player.class).getResultList();
+            return players;
         }catch (Exception ex){
             System.out.println(ex.getMessage());
+            return null;
         }
-        return userList;
     }
 
     public void createPlayer(Player player){

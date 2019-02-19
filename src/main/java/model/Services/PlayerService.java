@@ -23,7 +23,7 @@ public class PlayerService {
     public void createPlayer(Player player){
         playerRepo.createPlayer(player);}
 
-    public List<User> allUsers(){ return playerRepo.allUsers();}
+    public List<Player> All(){ return playerRepo.All();}
 
     public Player getById(Long id){return playerRepo.getById(id);}
 }
