@@ -1,4 +1,7 @@
-package model.logic;
+package model.Repository;
+
+import model.logic.Player;
+import model.logic.User;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.Resource;
@@ -22,37 +25,11 @@ import java.util.List;
 
 @Local
 @Stateless
-public class DatabaseProvider {
-
+public class PlayerRepo{
     @PersistenceContext(unitName = "myPU")
     EntityManager em;
 
     private ArrayList<User> userList = new ArrayList<>();
-
-    @PostConstruct
-    public void pietje_init() {
-        userList.add(new User("local", "user"));
-        userList.add(new User("hard", "coded"));
-    }
-
-    public ArrayList<User> getUsers(){
-        try {
-            InitialContext ctx = new InitialContext();
-            DataSource ds = (DataSource) ctx.lookup("jdbc/PayaraPool");
-            Connection conn = ds.getConnection();
-            Statement stmt = conn.createStatement();
-            ResultSet rs = stmt.executeQuery("SELECT * FROM users");
-            while (rs.next()){
-                User u = new User(rs.getString("username"),rs.getString("password"));
-                userList.add(u);
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        } catch (NamingException e) {
-            e.printStackTrace();
-        }
-        return userList;
-    }
 
     public List<User> allUsers(){
         List<User> userList = null;
@@ -65,13 +42,20 @@ public class DatabaseProvider {
         return userList;
     }
 
-    public void persistUser(User user){
+    public void createPlayer(Player player){
         try {
-            em.persist(user);
+            em.persist(player);
         }catch (Exception ex){
             System.out.println(ex.getMessage());
         }
-
     }
 
+    public Player getById(Long id) {
+        try {
+            return em.find(Player.class, id);
+        }catch (Exception ex){
+            System.out.println(ex.getMessage());
+            return null;
+        }
+    }
 }

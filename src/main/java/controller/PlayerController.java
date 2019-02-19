@@ -1,30 +1,35 @@
 package controller;
 
-import model.facade.DatabaseFacade;
+import model.Services.PlayerService;
+import model.logic.Player;
 import model.logic.User;
 
 import javax.ejb.EJB;
-import javax.ws.rs.Consumes;
-import javax.ws.rs.GET;
-import javax.ws.rs.POST;
-import javax.ws.rs.Path;
+import javax.ws.rs.*;
 import java.util.List;
 
 @Path("player")
 public class PlayerController {
 
     @EJB
-    DatabaseFacade databaseFacade;
+    PlayerService playerService;
 
     @GET
     @Consumes("application/json")
     public List<User> allUsers(){
-        return databaseFacade.allUsers();
+        return playerService.allUsers();
     }
 
     @POST
     @Consumes("application/json")
-    public void createPlayer(User user){
-        databaseFacade.persistUser(user);
+    public void createPlayer(Player player){
+        playerService.createPlayer(player);
+    }
+
+    @GET
+    @Path("/{id}")
+    @Consumes("application/json")
+    public Player getById(@PathParam("id") Long id){
+        return playerService.getById(id);
     }
 }

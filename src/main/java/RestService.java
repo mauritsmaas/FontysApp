@@ -1,3 +1,4 @@
+import controller.ClubController;
 import controller.PlayerController;
 
 import javax.ws.rs.ApplicationPath;
@@ -17,5 +18,6 @@ public class RestService extends Application {
 
     private void addRestResourceClasses(Set<Class<?>> resources) {
         resources.add(PlayerController.class);
+        resources.add(ClubController.class);
     }
 }
