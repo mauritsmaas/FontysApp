@@ -23,3 +23,6 @@ K
 src/main/webapp/profile.jsp,3\9\3932b6a22a1db264677b40c5b9307e011739496b
 ]
 -src/main/java/controller/UserPageServlet.java,7\2\7286ff631794d5bf291458d62c54f169c0ca42ec
+:
+
+.gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302

@@ -9,6 +9,7 @@ import javax.ejb.Singleton;
 import javax.ejb.Stateless;
 import javax.enterprise.context.ApplicationScoped;
 import java.util.ArrayList;
+import java.util.List;
 
 @Stateless
 public class DatabaseFacade {
@@ -24,4 +25,6 @@ public class DatabaseFacade {
     public ArrayList<User> getUsers(){ return databaseProvider.getUsers();}
 
     public void persistUser(User user){databaseProvider.persistUser(user);}
+
+    public List<User> allUsers(){ return databaseProvider.allUsers();}
 }

@@ -54,6 +54,17 @@ public class DatabaseProvider {
         return userList;
     }
 
+    public List<User> allUsers(){
+        List<User> userList = null;
+        try {
+            userList = em.createQuery(
+                    "SELECT u FROM User u", User.class).getResultList();
+        }catch (Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return userList;
+    }
+
     public void persistUser(User user){
         try {
             em.persist(user);
