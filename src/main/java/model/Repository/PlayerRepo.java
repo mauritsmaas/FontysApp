@@ -1,5 +1,6 @@
 package model.Repository;
 
+import model.Interceptors.PlayerInterceptor;
 import model.logic.Player;
 import model.logic.User;
 
@@ -9,6 +10,7 @@ import javax.ejb.Local;
 import javax.ejb.Singleton;
 import javax.ejb.Stateful;
 import javax.ejb.Stateless;
+import javax.interceptor.Interceptors;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.persistence.EntityManager;
@@ -51,6 +53,7 @@ public class PlayerRepo{
         }
     }
 
+    @Interceptors(PlayerInterceptor.class)
     public Player getById(Long id) {
         try {
             return em.find(Player.class, id);

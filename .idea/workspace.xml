@@ -7,25 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="48105b4e-6e4e-4291-910c-8e9bbbb28b05" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/controller/MatchSetupController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/Repository/MatchSetupRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/Services/MatchSetupService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/logic/MatchSetup.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/Interceptors/PlayerInterceptor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/ClubController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ClubController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/PlayerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/PlayerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Repository/ClubRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Repository/ClubRepo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/Repository/PlayerRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Repository/PlayerRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Services/ClubService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Services/ClubService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Services/PlayerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Services/PlayerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/logic/Club.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/logic/Club.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/logic/Match.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/logic/Match.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/logic/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/logic/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/logic/Upgrade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/logic/Upgrade.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/resources.iml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/resources.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/JavaEE/WEB-INF/classes/resources.iml" beforeDir="false" afterPath="$PROJECT_DIR$/target/JavaEE/WEB-INF/classes/resources.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/resources.iml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/resources.iml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -53,11 +37,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/model/logic/Club.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="62" selection-start-line="62" selection-end-line="62" />
+            <state relative-caret-position="119">
+              <caret line="17" column="25" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -65,11 +49,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/controller/PlayerController.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/model/Interceptors/PlayerInterceptor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-6">
-              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+            <state relative-caret-position="238">
+              <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -80,8 +64,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/model/Services/PlayerService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="29" column="62" selection-start-line="29" selection-start-column="62" selection-end-line="29" selection-end-column="62" />
+            <state relative-caret-position="249">
+              <caret line="27" selection-start-line="27" selection-end-line="27" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -90,10 +74,23 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/controller/UpgradeController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/controller/PlayerController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="42" column="33" selection-start-line="42" selection-start-column="33" selection-end-line="42" selection-end-column="33" />
+            <state relative-caret-position="221">
+              <caret line="32" selection-start-line="32" selection-end-line="32" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#689#690#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/model/Repository/PlayerRepo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="57" column="13" lean-forward="true" selection-start-line="57" selection-start-column="13" selection-end-line="57" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -133,7 +130,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/webapp/pages/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/glassfish-resources.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/mysql/jdbc/Driver.java" />
         <option value="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" />
@@ -173,7 +169,6 @@
         <option value="$PROJECT_DIR$/src/main/java/model/Repository/ClubRepo.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/Services/ClubService.java" />
         <option value="$PROJECT_DIR$/src/main/java/controller/ClubController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/Repository/PlayerRepo.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/Services/PlayerService.java" />
         <option value="$PROJECT_DIR$/src/main/java/controller/PlayerController.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/logic/Upgrade.java" />
@@ -184,6 +179,8 @@
         <option value="$PROJECT_DIR$/src/main/java/model/Services/MatchSetupService.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/Repository/MatchSetupRepo.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/logic/Player.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/Repository/PlayerRepo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/Interceptors/PlayerInterceptor.java" />
       </list>
     </option>
   </component>
@@ -278,7 +275,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="model" type="462c0819:PsiDirectoryNode" />
-              <item name="logic" type="462c0819:PsiDirectoryNode" />
+              <item name="Interceptors" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="FontysApp" type="b2602c69:ProjectViewProjectNode" />
@@ -288,15 +285,6 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="model" type="462c0819:PsiDirectoryNode" />
               <item name="Repository" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FontysApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FontysApp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-              <item name="Services" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="FontysApp" type="b2602c69:ProjectViewProjectNode" />
@@ -322,7 +310,7 @@
     <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550774371596" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550782000823" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="D:/Program Files (x86)/nodejs/node" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -529,7 +517,7 @@
       <workItem from="1550600477496" duration="3072000" />
       <workItem from="1550609481973" duration="56000" />
       <workItem from="1550649309002" duration="2032000" />
-      <workItem from="1550772137577" duration="2346000" />
+      <workItem from="1550772137577" duration="5049000" />
     </task>
     <task id="LOCAL-00001" summary="commit all">
       <created>1550481717046</created>
@@ -549,7 +537,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="112066000" />
+    <option name="totallyTimeSpent" value="114769000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -564,7 +552,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2590604" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2590604" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -575,7 +563,7 @@
       <window_info id="Persistence" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3385269" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3385269" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.398017" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -789,16 +777,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/Repository/PlayerRepo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="66" column="46" selection-start-line="66" selection-start-column="46" selection-end-line="66" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controller/PackController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
@@ -915,26 +893,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/PlayerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/Services/PlayerService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="29" column="62" selection-start-line="29" selection-start-column="62" selection-end-line="29" selection-end-column="62" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/model/logic/Player.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="232">
@@ -951,8 +909,49 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/model/logic/Club.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="62" selection-start-line="62" selection-end-line="62" />
+        <state relative-caret-position="119">
+          <caret line="17" column="25" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/Repository/PlayerRepo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="57" column="13" lean-forward="true" selection-start-line="57" selection-start-column="13" selection-end-line="57" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/Services/PlayerService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/PlayerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#689#690#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/Interceptors/PlayerInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
