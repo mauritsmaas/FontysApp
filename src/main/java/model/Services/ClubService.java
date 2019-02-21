@@ -9,6 +9,7 @@ import model.logic.User;
 import javax.annotation.PostConstruct;
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
+import java.security.acl.LastOwnerException;
 import java.util.List;
 
 @Stateless
@@ -30,4 +31,8 @@ public class ClubService {
     public List<Club> all() {
         return clubRepo.all();
     }
+
+    public void update(Club club){clubRepo.update(club);}
+
+    public void contract(Long clubid, Long playerid){clubRepo.contract(clubid, playerid);}
 }

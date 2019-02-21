@@ -1,5 +1,8 @@
 package model.logic;
 
+import org.hibernate.annotations.LazyCollection;
+import org.hibernate.annotations.LazyCollectionOption;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -13,8 +16,15 @@ public class Club {
     private Long id;
     private String name;
     private Long balance;
-    @ManyToMany(targetEntity = Player.class)
+    @OneToMany(targetEntity = Player.class)
+    @LazyCollection(LazyCollectionOption.FALSE)
     private List<Player> players = new ArrayList<>();
+    @OneToMany
+    @LazyCollection(LazyCollectionOption.FALSE)
+    private List<Upgrade> upgrades = new ArrayList<>();
+
+    @OneToOne
+    private MatchSetup matchSetup;
 
     public Long getId() {
         return id;
@@ -46,5 +56,23 @@ public class Club {
 
     public void setPlayers(List<Player> players) {
         this.players = players;
+    }
+
+    public void addPlayer(Player player){players.add(player);}
+
+    public List<Upgrade> getUpgrades() {
+        return upgrades;
+    }
+
+    public void setUpgrades(List<Upgrade> upgrades) {
+        this.upgrades = upgrades;
+    }
+
+    public MatchSetup getMatchSetup() {
+        return matchSetup;
+    }
+
+    public void setMatchSetup(MatchSetup matchSetup) {
+        this.matchSetup = matchSetup;
     }
 }

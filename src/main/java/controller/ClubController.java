@@ -2,7 +2,6 @@ package controller;
 
 import model.Services.ClubService;
 import model.logic.Club;
-import model.logic.Player;
 
 import javax.ejb.EJB;
 import javax.ws.rs.*;
@@ -33,10 +32,16 @@ public class ClubController {
         return clubService.getById(id);
     }
 
-    @POST
+    @PUT
+    @Consumes("application/json")
+    public void update(Club club){
+        clubService.update(club);
+    }
+
+    @GET
     @Path("/{clubid}/contract/{playerid}")
     @Consumes("application/json")
     public void contractPlayer(@PathParam("clubid") Long clubid, @PathParam("playerid") Long playerid){
-
+        clubService.contract(clubid,playerid);
     }
 }

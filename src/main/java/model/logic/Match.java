@@ -1,5 +1,8 @@
 package model.logic;
 
+import org.hibernate.annotations.LazyCollection;
+import org.hibernate.annotations.LazyCollectionOption;
+
 import javax.persistence.*;
 import java.util.List;
 
@@ -11,8 +14,9 @@ public class Match {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String score;
-    @ManyToMany(targetEntity = Player.class)
-    private List<Player> players;
+    @OneToMany
+    @LazyCollection(LazyCollectionOption.FALSE)
+    private List<MatchSetup> matchSetups;
 
     public Long getId() {
         return id;
@@ -30,11 +34,11 @@ public class Match {
         this.score = score;
     }
 
-    public List<Player> getPlayers() {
-        return players;
+    public void setMatchSetups(List<MatchSetup> matchSetups) {
+        this.matchSetups = matchSetups;
     }
 
-    public void setPlayers(List<Player> players) {
-        this.players = players;
+    public List<MatchSetup> getMatchSetups() {
+        return matchSetups;
     }
 }

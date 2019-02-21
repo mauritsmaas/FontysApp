@@ -1,63 +1,60 @@
 package model.Repository;
 
-import model.logic.Club;
-import model.logic.Player;
+import model.logic.MatchSetup;
 
 import javax.ejb.Local;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import java.util.ArrayList;
 import java.util.List;
 
 @Local
 @Stateless
-public class ClubRepo {
+public class MatchSetupRepo {
     @PersistenceContext(unitName = "myPU")
     EntityManager em;
 
-    public void createClub(Club club){
+    public void create(MatchSetup matchSetup){
         try {
-            em.persist(club);
+            em.persist(matchSetup);
         }catch (Exception ex){
             System.out.println(ex.getMessage());
         }
     }
 
-    public Club getById(Long id) {
+    public MatchSetup getById(Long id) {
         try {
-            return em.find(Club.class, id);
-        }catch (Exception ex){
-            System.out.println(ex.getMessage());
-            return null;
-        }
-    }
-
-    public void update(Club club){
-        try {
-            em.merge(club);
-        }catch (Exception ex){
-            System.out.println(ex.getMessage());
-        }
-    }
-
-    public List<Club> all(){
-        List<Club> clubs;
-        try {
-            clubs = em.createQuery(
-                    "SELECT c FROM Club c", Club.class).getResultList();
-            return clubs;
+            return em.find(MatchSetup.class, id);
         }catch (Exception ex){
             System.out.println(ex.getMessage());
             return null;
         }
     }
 
-    public void contract(Long clubid, Long playerid){
+    public List<MatchSetup> All(){
+        List<MatchSetup> matchSetups;
         try {
-            Club club = em.find(Club.class, clubid);
-            club.addPlayer(em.find(Player.class, playerid));
-            em.merge(club);
+            matchSetups = em.createQuery(
+                    "SELECT c FROM MatchSetup c", MatchSetup.class).getResultList();
+            return matchSetups;
+        }catch (Exception ex){
+            System.out.println(ex.getMessage());
+            return null;
+        }
+    }
+
+    public void update(MatchSetup matchSetup) {
+        try {
+            em.merge(matchSetup);
+        }catch (Exception ex){
+            System.out.println(ex.getMessage());
+        }
+    }
+
+    public void delete(Long id) {
+        try {
+            MatchSetup matchSetup = em.find(MatchSetup.class, id);
+            em.remove(matchSetup);
         }catch (Exception ex){
             System.out.println(ex.getMessage());
         }

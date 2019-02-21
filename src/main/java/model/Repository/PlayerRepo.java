@@ -59,4 +59,12 @@ public class PlayerRepo{
             return null;
         }
     }
+
+    public void update(Player player){
+        try {
+            em.merge(player);
+        }catch (Exception ex){
+            System.out.println(ex.getMessage());
+        }
+    }
 }

@@ -15,24 +15,8 @@ public class Player {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String name;
-    private Long overallRating;
-    private Long games;
+    private Long rating;
     private Long price;
-
-    @ManyToMany(targetEntity = Club.class)
-    @LazyCollection(LazyCollectionOption.FALSE)
-    private List<Club> clubs = new ArrayList<>();
-
-    @ManyToMany(targetEntity = Match.class)
-    @LazyCollection(LazyCollectionOption.FALSE)
-    private List<Match> matches;
-
-    @OneToOne
-    private Pack pack;
-
-    @OneToMany( targetEntity=Upgrade.class)
-    @LazyCollection(LazyCollectionOption.FALSE)
-    private List<Upgrade> upgrades;
 
     public Long getId() {
         return id;
@@ -50,20 +34,12 @@ public class Player {
         this.name = name;
     }
 
-    public Long getOverallRating() {
-        return overallRating;
+    public Long getRating() {
+        return rating;
     }
 
-    public void setOverallRating(Long overallRating) {
-        this.overallRating = overallRating;
-    }
-
-    public Long getGames() {
-        return games;
-    }
-
-    public void setGames(Long games) {
-        this.games = games;
+    public void setRating(Long rating) {
+        this.rating = rating;
     }
 
     public Long getPrice() {
@@ -72,21 +48,5 @@ public class Player {
 
     public void setPrice(Long price) {
         this.price = price;
-    }
-
-    public List<Club> getClubs() {
-        return clubs;
-    }
-
-    public void setClubs(List<Club> clubs) {
-        this.clubs = clubs;
-    }
-
-    public List<Match> getMatches() {
-        return matches;
-    }
-
-    public void setMatches(List<Match> matches) {
-        this.matches = matches;
     }
 }

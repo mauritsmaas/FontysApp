@@ -32,4 +32,8 @@ public class PlayerController {
     public Player getById(@PathParam("id") Long id){
         return playerService.getById(id);
     }
+
+    @PUT
+    @Consumes("application/json")
+    public void update(Player player){playerService.update(player);}
 }

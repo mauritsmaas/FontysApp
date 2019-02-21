@@ -10,10 +10,6 @@ public class Upgrade {
     private Long id;
     private String name;
     private Long boost;
-    @OneToOne
-    private Pack pack;
-    @ManyToOne
-    private Player player;
 
     public Long getId() {
         return id;
@@ -21,22 +17,6 @@ public class Upgrade {
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public Pack getPack() {
-        return pack;
-    }
-
-    public void setPack(Pack pack) {
-        this.pack = pack;
-    }
-
-    public Player getPlayer() {
-        return player;
-    }
-
-    public void setPlayer(Player player) {
-        this.player = player;
     }
 
     public String getName() {

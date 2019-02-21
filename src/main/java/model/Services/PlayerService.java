@@ -26,4 +26,6 @@ public class PlayerService {
     public List<Player> All(){ return playerRepo.All();}
 
     public Player getById(Long id){return playerRepo.getById(id);}
+
+    public void update(Player player){playerRepo.update(player);}
 }
