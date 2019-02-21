@@ -45,6 +45,7 @@ public class PlayerRepo{
         }
     }
 
+    @Interceptors(PlayerInterceptor.class)
     public void createPlayer(Player player){
         try {
             em.persist(player);
@@ -53,7 +54,6 @@ public class PlayerRepo{
         }
     }
 
-    @Interceptors(PlayerInterceptor.class)
     public Player getById(Long id) {
         try {
             return em.find(Player.class, id);
