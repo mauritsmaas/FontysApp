@@ -13,6 +13,9 @@ public class User implements Serializable {
     private String username;
     private String password;
 
+    @OneToOne
+    private Club club;
+
     public User() {    }
 
     public User(String username, String password) {
@@ -42,6 +45,14 @@ public class User implements Serializable {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public Club getClub() {
+        return club;
+    }
+
+    public void setClub(Club club) {
+        this.club = club;
     }
 
     @Override

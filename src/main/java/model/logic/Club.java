@@ -26,6 +26,9 @@ public class Club {
     @OneToOne
     private MatchSetup matchSetup;
 
+    @OneToOne
+    private User user;
+
     public Long getId() {
         return id;
     }
@@ -74,5 +77,13 @@ public class Club {
 
     public void setMatchSetup(MatchSetup matchSetup) {
         this.matchSetup = matchSetup;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 }
