@@ -10,7 +10,7 @@ public class PlayerInterceptor {
     @AroundInvoke
     public Object intercept(InvocationContext context) throws Exception {
 
-        System.out.println("PlayerInterceptor - Logging BEFORE calling method :"+ context.getMethod().getName());
+        System.out.println("PlayerInterceptor - Logging BEFORE calling method : "+ context.getMethod().getName());
 
         Object[] result = context.getParameters();
         Player p = (Player) result[0];
