@@ -60,3 +60,9 @@ b
 2src/main/java/controller/MatchSetupController.java,3\4\34d3216b4f908b13af2746dd58e34d978a597646
 g
 7src/main/java/model/Interceptors/PlayerInterceptor.java,c\5\c52e01029a3e5037e4d24535762647e599549953
+\
+,src/main/java/controller/UserController.java,3\a\3ac406ab7fd0ec369e673e77f88c52d3f53cf48f
+]
+-src/main/java/model/Services/UserService.java,2\c\2cce4d2f670bca9f4e80f5c4ee0980181a8a346f
+\
+,src/main/java/model/Repository/UserRepo.java,9\d\9dae0b4efdb17e31e12c9c81e76344d0cf590017

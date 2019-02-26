@@ -22,5 +22,6 @@ public class RestService extends Application {
         resources.add(PackController.class);
         resources.add(MatchSetupController.class);
         resources.add(MatchController.class);
+        resources.add(UserController.class);
     }
 }
