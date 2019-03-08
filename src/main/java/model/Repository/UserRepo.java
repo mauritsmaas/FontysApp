@@ -12,7 +12,7 @@ import java.util.List;
 @Stateless
 public class UserRepo {
     @PersistenceContext(unitName = "myPU")
-    EntityManager em;
+    public EntityManager em;
 
     public void create(User user){
         try {

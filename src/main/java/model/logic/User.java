@@ -5,8 +5,12 @@ import java.io.Serializable;
 
 @Entity
 @Table(name = "users")
+@NamedQueries(
+        @NamedQuery(name = User.FIND_ALL, query = "select b from User b")
+)
 public class User implements Serializable {
 
+    public static final String FIND_ALL = "User.FindAll";
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
