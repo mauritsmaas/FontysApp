@@ -5,8 +5,9 @@ import java.io.Serializable;
 
 @Entity
 @Table(name = "users")
-@NamedQueries(
-        @NamedQuery(name = User.FIND_ALL, query = "select b from User b")
+@NamedQueries({
+        @NamedQuery(name = User.FIND_ALL, query = "select b from User b"),
+        @NamedQuery(name = "findUserById", query = "SELECT u FROM User u WHERE u.username = :username")}
 )
 public class User implements Serializable {
 

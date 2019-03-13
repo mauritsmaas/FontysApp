@@ -66,3 +66,15 @@ g
 ,src/main/java/model/Repository/UserRepo.java,9\d\9dae0b4efdb17e31e12c9c81e76344d0cf590017
 K
 src/test/java/UserTest.java,d\a\da17b786f51da7245c1b8003270a586b3dfe3906
+U
+%src/test/java/UserControllerTest.java,8\5\8591bec7d23c158e18d96d12fb18e32ad2e76659
+M
+src/main/java/Auth/Group.java,f\f\ffc942757ef7fbc02f92063b48b117d7104dc66f
+V
+&src/main/java/Auth/EmailValidator.java,1\5\1545b018de6f6805cdde699a60c85a7030680a54
+[
++src/main/java/Auth/AuthenticationUtils.java,8\f\8f814ca0bd32de9e59e81732adc1a3e307d36a10
+V
+&src/main/java/Auth/AuthController.java,b\1\b1322034e8deb35e1afe0dfb86dc8bfc183d012c
+O
+src/main/java/Auth/UserEJB.java,c\7\c7633df140b1b1f9aaccea53aa844b06c149094f
