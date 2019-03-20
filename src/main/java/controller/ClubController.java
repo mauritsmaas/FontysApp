@@ -15,6 +15,7 @@ public class ClubController {
 
     @GET
     @Consumes("application/json")
+    @Produces("application/json")
     public List<Club> allClubs(){
         return clubService.all();
     }
@@ -28,6 +29,7 @@ public class ClubController {
     @GET
     @Path("/{id}")
     @Consumes("application/json")
+    @Produces("application/json")
     public Club getById(@PathParam("id") Long id){
         return clubService.getById(id);
     }

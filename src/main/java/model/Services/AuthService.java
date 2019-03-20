@@ -1,7 +1,9 @@
 package model.Services;
 import Auth.AuthenticationUtils;
 import com.auth0.jwt.interfaces.DecodedJWT;
+import model.Repository.ClubRepo;
 import model.Repository.UserRepo;
+import model.logic.Club;
 import model.logic.User;
 
 import javax.ejb.EJB;
@@ -20,6 +22,9 @@ public class AuthService extends BaseService {
     @EJB
     UserRepo userRepository;
 
+    @EJB
+    ClubRepo userRepo;
+
     public boolean register (User user) {
         if (user == null)
             return false;
@@ -35,7 +40,10 @@ public class AuthService extends BaseService {
             return false;
         }
 
+        Club club = new Club(user.getClubname(), user);
+        user.setClub(club);
         userRepository.create(user);
+        userRepo.createClub(club);
 
         return true;
     }

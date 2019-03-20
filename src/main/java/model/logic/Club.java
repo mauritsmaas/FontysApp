@@ -3,6 +3,7 @@ package model.logic;
 import org.hibernate.annotations.LazyCollection;
 import org.hibernate.annotations.LazyCollectionOption;
 
+import javax.json.bind.annotation.JsonbTransient;
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -28,6 +29,14 @@ public class Club {
 
     @OneToOne
     private User user;
+
+    public Club(){}
+
+    public Club(String clubname, User user){
+        this.name = clubname;
+        this.user = user;
+        balance = Long.valueOf(5000);
+    }
 
     public Long getId() {
         return id;
@@ -79,6 +88,7 @@ public class Club {
         this.matchSetup = matchSetup;
     }
 
+    @JsonbTransient
     public User getUser() {
         return user;
     }

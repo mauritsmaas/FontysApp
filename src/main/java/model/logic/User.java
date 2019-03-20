@@ -19,6 +19,7 @@ public class User implements Serializable {
     private Long id;
     private String username;
     private String password;
+    private String clubname;
 
     @OneToOne
     private Club club;
@@ -62,8 +63,16 @@ public class User implements Serializable {
         this.club = club;
     }
 
+    public String getClubname() {
+        return clubname;
+    }
+
+    public void setClubname(String clubname) {
+        this.clubname = clubname;
+    }
+
     public boolean validForRegistration () {
-        return !this.username.isEmpty() && !this.password.isEmpty();
+        return !this.username.isEmpty() && !this.password.isEmpty() && !this.clubname.isEmpty();
     }
 
     @Override
