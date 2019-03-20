@@ -28,6 +28,12 @@
       <version>8.0</version>
     </dependency>
 
+    <dependency>
+      <groupId>com.auth0</groupId>
+      <artifactId>java-jwt</artifactId>
+      <version>3.8.0</version>
+    </dependency>
+
     <!-- added hibernate v5.3.7final -->
     <dependency>
     <groupId>org.hibernate</groupId>

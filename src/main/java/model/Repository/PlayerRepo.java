@@ -1,27 +1,14 @@
 package model.Repository;
 
-import model.Interceptors.PlayerInterceptor;
+import model.Interceptors.SoccergameInterceptor;
 import model.logic.Player;
 import model.logic.User;
 
-import javax.annotation.PostConstruct;
-import javax.annotation.Resource;
 import javax.ejb.Local;
-import javax.ejb.Singleton;
-import javax.ejb.Stateful;
 import javax.ejb.Stateless;
 import javax.interceptor.Interceptors;
-import javax.naming.InitialContext;
-import javax.naming.NamingException;
 import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
 import javax.persistence.PersistenceContext;
-import javax.sql.DataSource;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -45,7 +32,7 @@ public class PlayerRepo{
         }
     }
 
-    @Interceptors(PlayerInterceptor.class)
+    @Interceptors(SoccergameInterceptor.class)
     public void createPlayer(Player player){
         try {
             em.persist(player);

@@ -4,15 +4,11 @@ import model.logic.User;
 
 import javax.ejb.Local;
 import javax.ejb.Stateless;
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
 import java.util.List;
 
 @Local
 @Stateless
-public class UserRepo {
-    @PersistenceContext(unitName = "myPU")
-    public EntityManager em;
+public class UserRepo extends BaseRepo{
 
     public void create(User user){
         try {
@@ -57,6 +53,18 @@ public class UserRepo {
             em.remove(user);
         }catch (Exception ex){
             System.out.println(ex.getMessage());
+        }
+    }
+
+    public User getByUsernameAndPassword(String username, String password) {
+        try {
+            return em.createNamedQuery("User.getByUsernameAndPassword", User.class)
+                    .setParameter("username", username)
+                    .setParameter("password", password)
+                    .getSingleResult();
+        } catch (Exception e) {
+            logger.warning(e.getMessage());
+            return null;
         }
     }
 }

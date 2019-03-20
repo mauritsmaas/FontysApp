@@ -7,7 +7,9 @@ import java.io.Serializable;
 @Table(name = "users")
 @NamedQueries({
         @NamedQuery(name = User.FIND_ALL, query = "select b from User b"),
-        @NamedQuery(name = "findUserById", query = "SELECT u FROM User u WHERE u.username = :username")}
+        @NamedQuery(name = "findUserById", query = "SELECT u FROM User u WHERE u.username = :username"),
+        @NamedQuery(name = "User.getByUsernameAndPassword", query = "select u from User u where u.username = :username and u.password = :password"),
+}
 )
 public class User implements Serializable {
 
@@ -58,6 +60,10 @@ public class User implements Serializable {
 
     public void setClub(Club club) {
         this.club = club;
+    }
+
+    public boolean validForRegistration () {
+        return !this.username.isEmpty() && !this.password.isEmpty();
     }
 
     @Override
