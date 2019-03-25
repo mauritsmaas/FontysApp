@@ -8,6 +8,10 @@ import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
+@NamedQueries({
+        @NamedQuery(name = "Club.getClubByUserId", query = "select c from Club c where user_id = :id"),
+}
+)
 @Entity
 @Table(name = "clubs")
 public class Club {

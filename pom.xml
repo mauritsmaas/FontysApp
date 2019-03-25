@@ -20,7 +20,7 @@
   </properties>
 
   <dependencies>
-    <!-- Webservlet, EJB beschikbaar -->
+    <!-- Webservlet, EJB beschikbaar, JWT -->
 
     <dependency>
       <groupId>javax</groupId>

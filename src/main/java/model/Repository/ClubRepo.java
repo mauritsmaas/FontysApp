@@ -13,9 +13,7 @@ import java.util.List;
 
 @Local
 @Stateless
-public class ClubRepo {
-    @PersistenceContext(unitName = "myPU")
-    EntityManager em;
+public class ClubRepo extends BaseRepo{
 
     public void createClub(Club club){
         try {
@@ -61,6 +59,17 @@ public class ClubRepo {
             em.merge(club);
         }catch (Exception ex){
             System.out.println(ex.getMessage());
+        }
+    }
+
+    public Club getClubByUserId(Long id) {
+        try {
+            return em.createNamedQuery("Club.getClubByUserId", Club.class)
+                    .setParameter("id", id)
+                    .getSingleResult();
+        } catch (Exception e) {
+            logger.warning(e.getMessage());
+            return null;
         }
     }
 }

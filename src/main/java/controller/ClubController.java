@@ -27,6 +27,14 @@ public class ClubController {
     }
 
     @GET
+    @Path("/user/{id}")
+    @Consumes("application/json")
+    @Produces("application/json")
+    public Club getClubByUserId(@PathParam("id") Long id){
+        return clubService.getClubByUserId(id);
+    }
+
+    @GET
     @Path("/{id}")
     @Consumes("application/json")
     @Produces("application/json")

@@ -35,4 +35,8 @@ public class ClubService {
     public void update(Club club){clubRepo.update(club);}
 
     public void contract(Long clubid, Long playerid){clubRepo.contract(clubid, playerid);}
+
+    public Club getClubByUserId(Long id) {
+        return clubRepo.getClubByUserId(id);
+    }
 }
