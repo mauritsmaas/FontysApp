@@ -14,9 +14,7 @@ import java.util.List;
 
 @Local
 @Stateless
-public class PlayerRepo{
-    @PersistenceContext(unitName = "myPU")
-    EntityManager em;
+public class PlayerRepo extends BaseRepo{
 
     private ArrayList<User> userList = new ArrayList<>();
 
@@ -56,5 +54,31 @@ public class PlayerRepo{
         }catch (Exception ex){
             System.out.println(ex.getMessage());
         }
+    }
+
+    public List<Player> getPlayersByClubId(Long id) {
+        List<Player> players;
+        try {
+            players = em.createQuery(
+                    "select p from Player p " +
+                            "inner join p.clubs clubs " +
+                            "where clubs.id in :id")
+                    .setParameter("id", id)
+                    .getResultList();
+            System.out.println(players.size());
+            return players;
+        }catch (Exception ex){
+            System.out.println(ex.getMessage());
+            return null;
+        }
+
+//        try {
+//            return em.createNamedQuery("Player.getPlayerByClubId", Player.class)
+//                    .setParameter("id", id)
+//                    .getResultList();
+//        } catch (Exception e) {
+//            logger.warning(e.getMessage());
+//            return null;
+//        }
     }
 }

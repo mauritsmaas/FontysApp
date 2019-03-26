@@ -1,7 +1,12 @@
 package model.logic;
 
+import org.hibernate.annotations.LazyCollection;
+import org.hibernate.annotations.LazyCollectionOption;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "players")
@@ -13,9 +18,12 @@ public class Player {
 
     @NotNull
     private String name;
-
     private Long rating;
     private Long price;
+
+    @ManyToMany(mappedBy = "players")
+    @LazyCollection(LazyCollectionOption.FALSE)
+    private List<Club> clubs = new ArrayList<>();
 
     public Long getId() {
         return id;
@@ -48,4 +56,14 @@ public class Player {
     public void setPrice(Long price) {
         this.price = price;
     }
+
+    public List<Club> getClubs() {
+        return clubs;
+    }
+
+    public void setClubs(List<Club> clubs) {
+        this.clubs = clubs;
+    }
+
+    public void addClub(Club club){this.clubs.add(club);}
 }

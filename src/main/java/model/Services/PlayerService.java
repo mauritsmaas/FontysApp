@@ -28,4 +28,7 @@ public class PlayerService {
     public Player getById(Long id){return playerRepo.getById(id);}
 
     public void update(Player player){playerRepo.update(player);}
+
+    public List<Player> getPlayersByClubId(Long id) { return playerRepo.getPlayersByClubId(id);
+    }
 }

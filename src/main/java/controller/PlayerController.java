@@ -20,6 +20,14 @@ public class PlayerController {
         return playerService.All();
     }
 
+    @GET
+    @Path("/club/{id}")
+    @Consumes("application/json")
+    @Produces("application/json")
+    public List<Player> getPlayersByClubId(@PathParam("id") Long id){
+        return playerService.getPlayersByClubId(id);
+    }
+
     @POST
     @Consumes("application/json")
     public void createPlayer(Player player){

@@ -55,8 +55,11 @@ public class ClubRepo extends BaseRepo{
     public void contract(Long clubid, Long playerid){
         try {
             Club club = em.find(Club.class, clubid);
-            club.addPlayer(em.find(Player.class, playerid));
+            Player player = em.find(Player.class, playerid);
+            club.addPlayer(player);
+            player.addClub(club);
             em.merge(club);
+            em.merge(player);
         }catch (Exception ex){
             System.out.println(ex.getMessage());
         }

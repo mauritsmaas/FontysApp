@@ -1,5 +1,6 @@
 package model.logic;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.annotations.LazyCollection;
 import org.hibernate.annotations.LazyCollectionOption;
 
@@ -21,9 +22,22 @@ public class Club {
     private Long id;
     private String name;
     private Long balance;
-    @OneToMany(targetEntity = Player.class)
+//    @OneToMany(targetEntity = Player.class)
+//    @LazyCollection(LazyCollectionOption.FALSE)
+//    private List<Player> players = new ArrayList<>();
+
+    @JsonbTransient
+    @ManyToMany(cascade = {
+            CascadeType.PERSIST,
+            CascadeType.MERGE
+    })
+    @JoinTable(name = "clubs_players",
+            joinColumns = @JoinColumn(name = "Club_id"),
+            inverseJoinColumns = @JoinColumn(name = "players_id")
+    )
     @LazyCollection(LazyCollectionOption.FALSE)
     private List<Player> players = new ArrayList<>();
+
     @OneToMany
     @LazyCollection(LazyCollectionOption.FALSE)
     private List<Upgrade> upgrades = new ArrayList<>();
