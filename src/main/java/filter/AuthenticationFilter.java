@@ -22,6 +22,7 @@ public class AuthenticationFilter implements ContainerRequestFilter {
     @EJB
     private JWTService service;
 
+
     @Override
     public void filter(ContainerRequestContext requestContext) throws IOException {
         // ignore /auth requests
@@ -69,8 +70,4 @@ public class AuthenticationFilter implements ContainerRequestFilter {
                         .build());
     }
 
-//    private void validateToken(String token) throws Exception {
-//        // Check if the token was issued by the server and if it's not expired
-//        // Throw an Exception if the token is invalid
-//    }
 }

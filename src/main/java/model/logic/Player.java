@@ -30,6 +30,10 @@ public class Player {
     @LazyCollection(LazyCollectionOption.FALSE)
     private List<Club> clubs = new ArrayList<>();
 
+    @OneToMany
+    @LazyCollection(LazyCollectionOption.FALSE)
+    private List<Link> links = new ArrayList<>();
+
     public Long getId() {
         return id;
     }
@@ -71,4 +75,20 @@ public class Player {
     }
 
     public void addClub(Club club){this.clubs.add(club);}
+
+    public List<Link> getLinks() {
+        return links;
+    }
+
+    public void setLinks(List<Link> links) {
+        this.links = links;
+    }
+
+    public void addLink(String uri, String rel, String method){
+        Link link = new Link();
+        link.setLink(uri);
+        link.setRel(rel);
+        link.setMethod(method);
+        links.add(link);
+    }
 }

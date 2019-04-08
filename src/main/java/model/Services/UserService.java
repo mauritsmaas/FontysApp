@@ -20,7 +20,8 @@ public class UserService {
     }
 
     public void create(User user){
-        userRepo.create(user);}
+        userRepo.create(user);
+    }
 
     public User getById(Long id){return userRepo.getById(id);}
 
