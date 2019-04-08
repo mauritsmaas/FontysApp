@@ -14,6 +14,7 @@ import java.util.logging.Logger;
 @Stateless
 @Interceptors(SoccergameInterceptor.class)
 public abstract class BaseRepo {
+
     @PersistenceContext(unitName = "myPU")
     protected EntityManager em;
 

@@ -1,6 +1,7 @@
 package model.logic;
 
 import javax.persistence.*;
+import javax.validation.constraints.Email;
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 
@@ -8,8 +9,9 @@ import java.io.Serializable;
 @Table(name = "users")
 @NamedQueries({
         @NamedQuery(name = User.FIND_ALL, query = "select b from User b"),
-        @NamedQuery(name = "findUserById", query = "SELECT u FROM User u WHERE u.username = :username"),
-        @NamedQuery(name = "User.getByUsernameAndPassword", query = "select u from User u where u.username = :username and u.password = :password"),
+        @NamedQuery(name = "findUserById", query = "SELECT u FROM User u WHERE u.email = :username"),
+        @NamedQuery(name = "User.getByUsernameAndPassword", query = "select u from User u where u.email = :username and u.password = :password"),
+        @NamedQuery(name = "User.getByEmailAndCode", query = "select u from User u where u.email = :email and u.verification_code = :code")
 }
 )
 public class User implements Serializable {
@@ -20,7 +22,11 @@ public class User implements Serializable {
     private Long id;
 
     @NotNull
-    private String username;
+    @Email
+    private String email;
+
+
+    private Long verification_code;
     private String password;
     private String clubname;
 
@@ -30,7 +36,7 @@ public class User implements Serializable {
     public User() {    }
 
     public User(String username, String password) {
-        this.username = username;
+        this.email = username;
         this.password = password;
     }
 
@@ -42,12 +48,20 @@ public class User implements Serializable {
         this.id = id;
     }
 
-    public String getUsername() {
-        return username;
+    public String getEmail() {
+        return email;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public Long getVerification_code() {
+        return verification_code;
+    }
+
+    public void setVerification_code(Long verification_code) {
+        this.verification_code = verification_code;
     }
 
     public String getPassword() {
@@ -75,11 +89,11 @@ public class User implements Serializable {
     }
 
     public boolean validForRegistration () {
-        return !this.username.isEmpty() && !this.password.isEmpty() && !this.clubname.isEmpty();
+        return !this.email.isEmpty() && !this.password.isEmpty() && !this.clubname.isEmpty();
     }
 
     @Override
     public String toString() {
-        return "User: "+ username + " - " + password;
+        return "User: "+ email + " - " + password;
     }
 }

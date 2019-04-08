@@ -26,7 +26,15 @@ public class AuthController {
     @Consumes("application/json")
     @Produces("application/json")
     public Response login(User user) {
-        return Response.ok(service.login(user.getUsername(), user.getPassword())).build();
+        return Response.ok(service.login(user.getEmail(), user.getPassword())).build();
+    }
+
+    @POST
+    @Path("login/code")
+    @Consumes("application/json")
+    @Produces("application/json")
+    public Response verifyUserWithCode(User user) {
+        return Response.ok(service.checkCode(user)).build();
     }
 }
 

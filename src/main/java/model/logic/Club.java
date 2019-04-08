@@ -1,11 +1,11 @@
 package model.logic;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.annotations.LazyCollection;
 import org.hibernate.annotations.LazyCollectionOption;
 
 import javax.json.bind.annotation.JsonbTransient;
 import javax.persistence.*;
+import javax.validation.constraints.PositiveOrZero;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -21,6 +21,8 @@ public class Club {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String name;
+
+    @PositiveOrZero
     private Long balance;
 //    @OneToMany(targetEntity = Player.class)
 //    @LazyCollection(LazyCollectionOption.FALSE)

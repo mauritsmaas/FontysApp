@@ -67,4 +67,16 @@ public class UserRepo extends BaseRepo{
             return null;
         }
     }
+
+    public User verifyCode(User user) {
+        try {
+            return em.createNamedQuery("User.getByEmailAndCode", User.class)
+                    .setParameter("email", user.getEmail())
+                    .setParameter("code", user.getVerification_code())
+                    .getSingleResult();
+        } catch (Exception e) {
+            logger.warning(e.getMessage());
+            return null;
+        }
+    }
 }

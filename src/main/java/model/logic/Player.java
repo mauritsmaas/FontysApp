@@ -4,7 +4,7 @@ import org.hibernate.annotations.LazyCollection;
 import org.hibernate.annotations.LazyCollectionOption;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotNull;
+import javax.validation.constraints.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,7 +18,12 @@ public class Player {
 
     @NotNull
     private String name;
+
+    @Min(40)
+    @Max(99)
     private Long rating;
+
+    @Positive
     private Long price;
 
     @ManyToMany(mappedBy = "players")

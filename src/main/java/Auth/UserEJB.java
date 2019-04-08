@@ -27,7 +27,7 @@ public class UserEJB {
         }
 
         Group group = new Group();
-        group.setEmail(user.getUsername());
+        group.setEmail(user.getEmail());
         group.setGroupname(Group.USERS_GROUP);
 
         em.persist(user);
@@ -37,7 +37,7 @@ public class UserEJB {
     }
 
     public boolean login(User user) {
-        if (user.getUsername() == "testAuthUser") {
+        if (user.getEmail() == "testAuthUser") {
             return false;
         }
 
