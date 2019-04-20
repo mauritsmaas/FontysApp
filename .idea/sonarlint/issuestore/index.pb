@@ -94,3 +94,13 @@ $src/main/java/filter/CORSFilter.java,5\5\5534ad01ad128f2319e4c2cf155fbf3459585
 ,src/main/java/model/Services/JWTService.java,e\8\e8ea77b9e24a2b1c5649dfb91d850dff64306a35
 \
 ,src/main/java/controller/AuthController.java,4\6\469b308a9ee308dbef3c4a228d876372d56db44f
+S
+#src/main/java/model/logic/Link.java,8\f\8f1a462954bdc19b87dada5c92d8e37e3761482a
+b
+2src/main/java/model/logic/Chat/MessageDecoder.java,2\9\2977086de5a7274b79581b9f05ef55b47a5fa84d
+b
+2src/main/java/model/logic/Chat/MessageEncoder.java,1\7\17046b097a36962c1c3935536c96ffd28fd702a7
+[
++src/main/java/model/logic/Chat/Message.java,8\a\8ae8a761c4c94d1fb690865ee55f392405260022
+\
+,src/main/java/controller/ChatController.java,8\6\867c6e787204f7808972078bb81dd9e8bd1ede58
