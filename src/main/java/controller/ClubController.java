@@ -2,6 +2,7 @@ package controller;
 
 import model.Services.ClubService;
 import model.logic.Club;
+import model.logic.Player;
 
 import javax.ejb.EJB;
 import javax.ws.rs.*;
@@ -49,9 +50,16 @@ public class ClubController {
     }
 
     @GET
-    @Path("/{clubid}/contract/{playerid}")
+    @Path("/{clubid}/contract/{rate}")
     @Consumes("application/json")
-    public void contractPlayer(@PathParam("clubid") Long clubid, @PathParam("playerid") Long playerid){
-        clubService.contract(clubid,playerid);
+    public Player contractPlayer(@PathParam("clubid") Long clubid, @PathParam("rate") String rate){
+        return clubService.contract(clubid, rate);
+    }
+
+    @GET
+    @Path("/{clubid}/sell/{playerid}")
+    @Consumes("application/json")
+    public Club sellPlayer(@PathParam("clubid") Long clubid, @PathParam("playerid") Long playerid){
+        return clubService.sell(clubid,playerid);
     }
 }

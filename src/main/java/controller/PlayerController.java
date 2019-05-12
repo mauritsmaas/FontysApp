@@ -36,6 +36,10 @@ public class PlayerController {
         playerService.createPlayer(player);
     }
 
+    @PUT
+    @Consumes("application/json")
+    public void update(Player player){playerService.update(player);}
+
     @GET
     @Path("/{id}")
     @Consumes("application/json")
@@ -46,10 +50,6 @@ public class PlayerController {
         player.addLink(getUriForSelf(uriInfo,player), "self", "DELETE");
         return player;
     }
-
-    @PUT
-    @Consumes("application/json")
-    public void update(Player player){playerService.update(player);}
 
     private String getUriForSelf(@Context UriInfo uriInfo, Player player){
         return uriInfo.getBaseUriBuilder()

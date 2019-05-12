@@ -20,7 +20,6 @@ public class AuthService extends BaseService {
     private static final int MIN_VERIFICATION_CODE = 999999;
     private static final int MAX_VERIFICATION_CODE = 100000;
 
-
     @EJB
     JWTService jwtService;
 

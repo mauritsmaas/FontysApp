@@ -82,6 +82,10 @@ public class Club {
         this.balance = balance;
     }
 
+    public void addBalance(Long amount) {
+        this.balance += amount;
+    }
+
     public List<Player> getPlayers() {
         return players;
     }

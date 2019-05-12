@@ -11,5 +11,4 @@ import java.util.logging.Logger;
 @Interceptors(SoccergameInterceptor.class)
 public abstract class BaseService{
     protected Logger logger = Logger.getLogger(this.getClass().getName());
-
 }

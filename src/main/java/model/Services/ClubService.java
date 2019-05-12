@@ -13,7 +13,7 @@ import java.security.acl.LastOwnerException;
 import java.util.List;
 
 @Stateless
-public class ClubService {
+public class ClubService extends BaseService {
 
     @EJB
     private ClubRepo clubRepo;
@@ -34,9 +34,12 @@ public class ClubService {
 
     public void update(Club club){clubRepo.update(club);}
 
-    public void contract(Long clubid, Long playerid){clubRepo.contract(clubid, playerid);}
+    public Player contract(Long clubid, String rate){ return clubRepo.contract(clubid, rate);}
 
     public Club getClubByUserId(Long id) {
         return clubRepo.getClubByUserId(id);
+    }
+
+    public Club sell(Long clubid, Long playerid) { return clubRepo.sell(clubid, playerid);
     }
 }
